@@ -1,0 +1,166 @@
+@import url(./reset.css);
+
+
+@font-face {
+    font-family: "YekanBakh-Bold";
+    src: url(../fonts/YekanBakh-Bold.woff);
+}
+
+@font-face {
+    font-family: "YekanBakh-Heavy";
+    src: url(../fonts/YekanBakh-Heavy.woff);
+}
+
+@font-face {
+    font-family: "YekanBakh-Medium";
+    src: url(../fonts/YekanBakh-Medium.woff);
+}
+
+@font-face {
+    font-family: "YekanBakh-Regular";
+    src: url(../fonts/YekanBakh-Regular.woff);
+}
+
+
+body {
+    height: 100vh;
+    font-family: "YekanBakh-Regular";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+*,
+*::after,
+*::before {
+    font-family: "YekanBakh-Heavy";
+    line-height: 1.2;
+    box-sizing: border-box;
+}
+
+.card {
+    width: 592px;
+    height: 424px;
+    background-image: url(../images/card.png);
+    background-size: cover;
+    border-radius: 12px;
+    position: relative;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    transition: all ease-in-out 1000ms;
+    overflow: hidden;
+    transition: all 1s ease-in-out;
+}
+
+.card__icons {
+    position: absolute;
+    left: -100%;
+    top: 0;
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    gap: 12px;
+    color: #ffffff;
+    transition: all ease-in-out 1s;
+
+
+}
+
+.card__icon--heart {
+    width: 48px;
+    height: 48px;
+    background-color: #C9184A;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+
+.card__message--icon {
+    width: 80px;
+    height: 48px;
+    background-color: #1D2939;
+    border-radius: 50px;
+    gap: 6px;
+    padding: 10.5px, 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card___icon--text {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+
+.card__text {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    bottom: -100%;
+    left: 0;
+    padding: 12px;
+    flex-direction: column;
+    color: #ffffff;
+    display: flex;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+    font-family: "YekanBakh-Medium";
+    transition: all ease-in-out 1s;
+
+
+}
+
+.card__text--title {
+    padding: 12px;
+    font-size: 24px;
+    font-weight: 700;
+
+}
+
+.card__text--caption {
+    font-size: 20px;
+    font-weight: 400;
+    padding-top: 12px;
+}
+
+
+.card:hover .card__text {
+    bottom: 0;
+    transition: all ease-in-out 1s;
+
+}
+
+@keyframes charchetion {
+  0% {
+        transform: rotate(0deg);
+    }
+
+   50% {
+        transform: rotate(5deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+
+}
+
+.card:hover.card {
+
+    animation: charchetion 1s ease-in-out ;
+
+}
+
+
+.card:hover .card__icons {
+    
+    left: 0%;
+
+}
